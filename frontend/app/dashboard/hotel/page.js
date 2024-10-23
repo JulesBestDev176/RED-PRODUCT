@@ -19,11 +19,11 @@ const Container = styled.div`
 `;
 
 const HotelDiv = styled.div`
-  height: 80%;
+  height: 90%;
   width: 40%;
   background-color: white;
   border-radius: 12px;
-  padding: 50px 20px;
+  padding: 20px 20px;
 `;
 
 const Top = styled.div`
