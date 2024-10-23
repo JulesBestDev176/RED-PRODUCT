@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = "http://localhost:5000/api";
 
 const apiClient = axios.create({
-  baseURL: process.env.API_URL,
+  baseURL: API_URL,
   timeout: 5000, // Augmenter le timeout à 5 secondes
 });
 

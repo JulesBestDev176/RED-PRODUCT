@@ -5,7 +5,7 @@ import styled from "styled-components";
 const HotelDiv = styled.div`
   width: calc(30% - 20px);
   margin-bottom: 20px;
-  height: 350px;
+  height: 300px;
   background-color: white;
   border: none;
   border-radius: 6px;
@@ -46,7 +46,7 @@ const Info = styled.div`
   .prix {
     font-size: 14px;
     font-weight: 300;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 `;
 
