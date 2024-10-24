@@ -33,7 +33,7 @@ app.use("/api", userRoutes);
 app.use("/api", deviseRoutes);
 app.use("/api", hotelRoutes);
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(5000 || process.env.PORT, () => {
   connectDB();
   console.log(
     `Server started at ${
