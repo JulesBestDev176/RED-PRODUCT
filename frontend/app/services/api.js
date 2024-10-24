@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const API_URL = "http://localhost:5000/api";
 //const API_URL = "https://red-product-frontend-peach.vercel.app/api";
-const API_URL = "https://red-product-three.vercel.app/api";
+const API_URL = "http://localhost:10000";
 
 const apiClient = axios.create({
   baseURL: API_URL,
