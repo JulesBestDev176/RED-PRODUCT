@@ -13,12 +13,11 @@ dotenv.config();
 const app = express();
 
 app.use(
-  cors()
-  //   {
-  //   origin: ["http://localhost:3000", "https://red-product-three.vercel.app"],
-  //   methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
-  //   credentials: true, // Autorise les cookies
-  // }
+  cors({
+    origin: ["http://localhost:3000", "https://red-product-three.vercel.app"],
+    methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
+    credentials: true, // Autorise les cookies
+  })
 );
 app.use(helmet());
 app.use(cookieParser());
