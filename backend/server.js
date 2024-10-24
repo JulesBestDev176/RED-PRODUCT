@@ -13,15 +13,12 @@ dotenv.config();
 const app = express();
 
 app.use(
-  cors({
-    origin: [
-      "http://localhost:3000", // URL de développement local
-      "https://red-product-frontend-peach.vercel.app",
-      "https://red-product-three.vercel.app",
-    ],
-    methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
-    credentials: true, // Autorise les cookies
-  })
+  cors()
+  //   {
+  //   origin: ["http://localhost:3000", "https://red-product-three.vercel.app"],
+  //   methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
+  //   credentials: true, // Autorise les cookies
+  // }
 );
 app.use(helmet());
 app.use(cookieParser());
@@ -37,11 +34,7 @@ app.use("/api", userRoutes);
 app.use("/api", deviseRoutes);
 app.use("/api", hotelRoutes);
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT, () => {
   connectDB();
-  console.log(
-    `Server started at ${
-      process.env.PORT ? "on assigned port" : "http://localhost:5000"
-    }`
-  );
+  console.log(`Server started at ${process.env.PORT}`);
 });
