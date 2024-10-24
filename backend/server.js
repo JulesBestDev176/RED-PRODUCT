@@ -14,7 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://red-product-three.vercel.app"],
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
     credentials: true, // Autorise les cookies
   })
