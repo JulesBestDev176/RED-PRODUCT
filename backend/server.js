@@ -13,14 +13,7 @@ dotenv.config();
 const app = express();
 
 app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://red-product-frontend-peach.vercel.app",
-    ], // Spécifiez votre origine front-end
-    methods: ["GET", "POST", "PATCH", "DELETE"], // Méthodes autorisées
-    credentials: true, // Autorise les cookies
-  })
+  cors()
 );
 app.use(helmet());
 app.use(cookieParser());
