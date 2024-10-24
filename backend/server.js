@@ -14,11 +14,11 @@ const app = express();
 
 app.use(
   cors({
-    // origin: [
-    //   "http://localhost:3000",
-    //   "https://red-product-frontend-peach.vercel.app",
-    // ], // Spécifiez votre origine front-end
-    methods: ["GET", "POST", "PATCH", "DELETE"], // Méthodes autorisées
+    origin: [
+      "http://localhost:3000",
+      "https://red-product-frontend-peach.vercel.app",
+    ],
+    methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
     credentials: true, // Autorise les cookies
   })
 );
@@ -36,7 +36,11 @@ app.use("/api", userRoutes);
 app.use("/api", deviseRoutes);
 app.use("/api", hotelRoutes);
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   connectDB();
-  console.log("Server started at http://localhost:5000");
+  console.log(
+    `Server started at ${
+      process.env.PORT ? "on assigned port" : "http://localhost:5000"
+    }`
+  );
 });

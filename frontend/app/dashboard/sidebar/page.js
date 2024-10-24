@@ -29,7 +29,7 @@ const Black = styled.div`
 const Top = styled.div`
   display: flex;
   flex-direction: column;
-  height: 75%;
+  height: 85%;
 `;
 
 const Logo = styled.div`
@@ -124,7 +124,7 @@ const Line = styled.div`
 `;
 
 const Bottom = styled.div`
-  height: 25%;
+  height: 15%;
   border-top: 1px solid #55595c;
   width: 90%;
 `;

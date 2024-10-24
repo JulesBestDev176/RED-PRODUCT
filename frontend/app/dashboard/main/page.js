@@ -71,7 +71,7 @@ const Main = ({ activePage }) => {
         console.log("Données d'hôtel récupérées :", hotelData);
         setHotels(hotelData);
       } catch (error) {
-        console.error("Error fetching hotels:", error);
+        console.error("Error recuperation hotels:", error);
       }
     };
 
