@@ -14,7 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Spécifiez votre origine front-end
+    origin: "http://localhost:5000", // Spécifiez votre origine front-end
     methods: ["GET", "POST", "PATCH", "DELETE"], // Méthodes autorisées
     credentials: true, // Autorise les cookies
   })
