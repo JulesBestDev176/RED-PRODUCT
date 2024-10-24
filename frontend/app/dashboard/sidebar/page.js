@@ -173,7 +173,9 @@ const Sidebar = ({ activePage, setActivePage, user }) => {
               <img src="/assets/images/user.jpg" alt="user" />
             </div>
             <div className="droite">
-              <div className="nom">{user.nom}</div>
+              <div className="nom">
+                {user ? user.nom : "Nom non disponible"}
+              </div>
               <div className="statut">
                 <div className="online">
                   <FaCircle />

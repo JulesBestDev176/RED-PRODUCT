@@ -63,6 +63,7 @@ const Number = styled.div`
 `;
 
 const Card = ({ card }) => {
+  if (!card) return null;
   return (
     <CardDiv>
       <Left>

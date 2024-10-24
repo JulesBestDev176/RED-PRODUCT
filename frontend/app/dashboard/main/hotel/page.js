@@ -51,7 +51,9 @@ const Info = styled.div`
 `;
 
 const Hotel = ({ hotel }) => {
-  console.log(`Image path: /assets/images/hotel/${hotel.image}`);
+  if (!hotel) {
+    return <div>Chargement...</div>; // État de chargement ou message approprié
+  }
   return (
     <HotelDiv>
       <Image>

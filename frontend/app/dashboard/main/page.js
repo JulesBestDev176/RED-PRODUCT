@@ -68,6 +68,7 @@ const Main = ({ activePage }) => {
     const fetchHotels = async () => {
       try {
         const hotelData = await listHotel();
+        console.log("Données d'hôtel récupérées :", hotelData);
         setHotels(hotelData);
       } catch (error) {
         console.error("Error fetching hotels:", error);
