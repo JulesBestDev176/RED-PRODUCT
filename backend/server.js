@@ -33,7 +33,11 @@ app.use("/api", userRoutes);
 app.use("/api", deviseRoutes);
 app.use("/api", hotelRoutes);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   connectDB();
-  console.log(`Server started at ${process.env.PORT}`);
+  console.log(
+    `Server started at ${
+      process.env.PORT ? "on assigned port" : "http://localhost:5000"
+    }`
+  );
 });
