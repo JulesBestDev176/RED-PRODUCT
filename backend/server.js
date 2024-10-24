@@ -14,8 +14,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
+    origin: [
+      "http://localhost:3000",
+      "https://red-product-frontend-peach.vercel.app",
+    ],
+    methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
     credentials: true, // Autorise les cookies
   })
 );
@@ -32,8 +35,6 @@ app.get("/", (req, res) => {
 app.use("/api", userRoutes);
 app.use("/api", deviseRoutes);
 app.use("/api", hotelRoutes);
-
-// || process.env.PORT
 
 app.listen(process.env.PORT || 5000, () => {
   connectDB();
