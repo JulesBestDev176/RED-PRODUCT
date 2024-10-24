@@ -17,6 +17,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://red-product-frontend-peach.vercel.app",
+      process.env.PORT,
     ],
     methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
     credentials: true, // Autorise les cookies
