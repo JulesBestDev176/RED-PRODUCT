@@ -41,5 +41,5 @@ app.use("/api", hotelRoutes);
 
 app.listen(process.env.PORT || 5000, () => {
   connectDB();
-  console.log(`${process.env.PORT} ? "Server started at ${process.env.PORT}" : "http://localhost::5000"`);
+  console.log(`${process.env.PORT} ? "Server started at ${process.env.PORT}" : "http://localhost:5000"`);
 });
