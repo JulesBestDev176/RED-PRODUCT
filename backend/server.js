@@ -36,10 +36,12 @@ app.use("/api", userRoutes);
 app.use("/api", deviseRoutes);
 app.use("/api", hotelRoutes);
 
-app.listen( process.env.PORT || 5000, () => {
+app.listen(5000, () => {
   connectDB();
-  const port = process.env.PORT || 5000; // Détermine le port à utiliser
-  console.log(`Server started at http://localhost:${port}`); // Affiche l'URL correcte
+  console.log(
+    `Server started at http://localhost:5000"
+    }`
+  );
 });
 
  
