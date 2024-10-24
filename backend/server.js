@@ -16,7 +16,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", // URL de développement local
-      "https://red-product-frontend-peach.vercel.app", // URL de production sur Vercel
+      "https://red-product-frontend-peach.vercel.app",
+      "https://red-product-three.vercel.app",
     ],
     methods: ["GET", "POST", "PATCH", "DELETE", "PUT"], // Méthodes autorisées
     credentials: true, // Autorise les cookies
