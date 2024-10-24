@@ -15,7 +15,6 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:10000",
       "http://localhost:3000",
       "https://red-product-frontend-peach.vercel.app"
     ],
